@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://angus-liu.github.io</id>
     <title>Angus的源部落</title>
-    <updated>2019-10-06T18:38:04.763Z</updated>
+    <updated>2019-10-06T18:42:39.776Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://angus-liu.github.io"/>
     <link rel="self" href="https://angus-liu.github.io/atom.xml"/>
@@ -10,38 +10,6 @@
     <logo>https://angus-liu.github.io/images/avatar.png</logo>
     <icon>https://angus-liu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Angus的源部落</rights>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://angus-liu.github.io/post/hello-gridea</id>
-        <link href="https://angus-liu.github.io/post/hello-gridea">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[德育中期答辩]]></title>
         <id>https://angus-liu.github.io/post/2017-12-18-Morality-defense</id>
@@ -102,6 +70,134 @@
 6.为即将到来的事情，做好一周的准备。<br>
 7.慢慢的割舍掉已有的坏习惯。<br>
 8.未完待续……</b></font></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[过年（写于节后）]]></title>
+        <id>https://angus-liu.github.io/post/2017-02-06-Spring-Festival</id>
+        <link href="https://angus-liu.github.io/post/2017-02-06-Spring-Festival">
+        </link>
+        <updated>2017-02-06T11:25:53.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="过年">过年</h1>
+<hr>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=436514312&auto=1&height=66"></iframe>
+<blockquote>
+<h2 id="宿舍">宿舍</h2>
+</blockquote>
+<p>考完试，在学校待了八九天。<br>
+因为错过了留宿申请的时间，没办法在学校待太久。<br>
+简单地收拾了下行李，跟寝室里因为工作晚回的哥们儿道了别。<br>
+拉着行李箱，走出寝室楼前照例向宿管阿姨问了声好。<br>
+阿姨看着我，知道我今天回去，一个劲叮嘱我路上小心。</p>
+<blockquote>
+<h2 id="车厢">车厢</h2>
+</blockquote>
+<p>车厢实在闷的很，走到车门处，清冷的空气呼啸而入。<br>
+21个小时，车窗外的风景从北方换成了南方。<br>
+一路上，乘客上上下下。<br>
+到成都时，偌大的车厢，空空荡荡。<br>
+妈已在车站，接过我拖着的行李箱，放在车上。<br>
+妈把车把交给我了，让我在这个城市驰骋。<br>
+昏暗中的成都有种迷人的味道，让人快要醉倒而迷失方向。<br>
+可能再不会有这样的机会，能让我如此轻松地回家。</p>
+<blockquote>
+<h2 id="母亲">母亲</h2>
+</blockquote>
+<p>父母都在变老，老得很厉害。<br>
+一个恍惚，妈老成了外婆的样子。<br>
+2016，这一年，妈没有闲着。<br>
+和着三姨，妈把一个水果市场的卫生承包了下来。<br>
+妈说她没有管理的头脑，所以她和三姨没有请人，决定自己干。<br>
+还未回家，妈就在电话里讲：“过年回来帮我扫两天地，体会一下挣钱的辛苦。”<br>
+我：“呃，行。”</p>
+<blockquote>
+<h2 id="选择">选择</h2>
+</blockquote>
+<p>扫地的时候，头里必须想些什么。<br>
+不然四五个小时连续不停的挥动扫把很容易让人联想到世界末日。<br>
+但我好歹是个会自娱自乐的人，心里总会乱想些什么。<br>
+妈说她不会，想着想着就会睡着，连扫地的时候都会睡着。<br>
+我问妈：“要是你有一家饭馆，自己干的话一个月能有5000的净利润，要是你请一个厨子一个月要付他4000的工资，而你什么都不用干，你选择怎么做？”<br>
+妈选择了前者，没说原因，光说了句：“快扫，不然待会又要扫到凌晨两点。”<br>
+同一个问题，问表妹时，她果断选择了后者。</p>
+<blockquote>
+<h2 id="表妹">表妹</h2>
+</blockquote>
+<p>表妹的2016年，是蜕变的一年，不像蛹化蝶，像雪化雨。<br>
+每一次电话，表妹会说她最近学会了烤什么面包，做什么慕斯。<br>
+二妹怎么怎么烦她，她一个18岁的女孩就开始边打工边带孩子的生活。<br>
+她说师傅现在就她一个亲传弟子，在很用心的教她。<br>
+她也跟师傅说过她的缺点就是懒，还有就是数学不好。<br>
+师傅说她知道自己是这样，证明她还不笨。<br>
+躺在床上，她跟我说，等上班她要打三个耳洞，等以后要纹一个动物的纹身。<br>
+等几年以后，在乐山一个安静的角落，开一家安静的面包店。<br>
+她不喜欢成都的喧嚣，感觉这个城市让她很压抑。<br>
+其实成都也有安静的角落，不过表妹的故乡是乐山。<br>
+故乡在每个人心里，都是最安静的，未曾喧嚣。</p>
+<blockquote>
+<h2 id="同学会">同学会</h2>
+</blockquote>
+<p>今年又错过了同学会。<br>
+初中时的班长打电话来时正准备服从妈的旨意，回去继续上岗。<br>
+高中时的班长发来聚会消息时已经待在学校，太远的距离就像一堵墙。<br>
+好在幸运的，去了一趟兄弟的家，算是拜年吧。<br>
+好在幸运的，我们六个还是找机会聚在了一起，仍旧谈论着去年的话题。<br>
+找了一家餐厅，过了小年，吃光抹净后才突然想起去看看老大。</p>
+<blockquote>
+<h2 id="老大">老大</h2>
+</blockquote>
+<p>远远得，老大站在那里，还像记忆中站在讲台上的她，岁月对老大很是温柔。<br>
+老大：“你们可好，读大学后没来我这报道一下，我还四处去问。”<br>
+六个人连忙自报家门。<br>
+老大：“要是没谈过一场恋爱，没出去走走，大学就荒废啦。”<br>
+我：“我的大学已经荒废了。”<br>
+老大：“可能再过几年就会忘了你们叫什么名字了。”<br>
+我们：“我们是不会忘了你的，永远都不会。”<br>
+初中时老大交给我的道理，到现在仍然受用。<br>
+也许会受用一辈子。</p>
+<blockquote>
+<h2 id="兄弟">兄弟</h2>
+</blockquote>
+<p>除夕夜，我们依旧是聚在一起。<br>
+初三毕业后这一习惯就没有变过，像是约定俗成。<br>
+兄弟开了六瓶酒，说是一人一瓶，五个人笑谈说没来的那个兄弟给他敬上。<br>
+我说我不会喝酒，一喝就得脸红。<br>
+兄弟说:“怕啥，喝一杯”。<br>
+喝一杯，这辈子的友情才不会被岁月冲淡。</p>
+<blockquote>
+<h2 id="豆腐皮">豆腐皮</h2>
+</blockquote>
+<p>初一的夜晚，早早地叫豆腐皮睡觉。<br>
+熄灯前豆腐皮一个劲地问我，什么时候他才能有自己的游戏机。<br>
+我说：“等你上了小学，上了初中，有能力克制自己并且学习成绩好的时候。等你考上了重点大学，哥还会给你买最贵的游戏笔记本。”<br>
+豆腐皮又问：“什么是重点大学，是不是你贴在墙上的那些？”<br>
+我：“恩。墙上贴的清华、北大都是。”<br>
+豆腐皮：“重点大学有什么好？”<br>
+我：“有我给你准备的游戏电脑，至于其他的好处，等你长大就知道了。”<br>
+豆腐皮：“那我要考最好的重点大学，要考上清华和北大。”<br>
+我：“睡吧，哥相信你会的。”</p>
+<blockquote>
+<h2 id="奶奶">奶奶</h2>
+</blockquote>
+<p>离别前的一晚，奶奶和我促膝长谈。<br>
+她跟我说因为粮食关，她的好多亲人都在饥饿中死去，死时嘴里含着一大口棉絮。<br>
+她跟我说小时候因为裹脚太疼，即使家里人怎么骂她，打她，她都没有裹脚。<br>
+她跟我说你要好好读书，我们吃够了苦，但不想你和你弟弟再吃苦。<br>
+她说：“八十岁是一个坎，不知道我今年能不能跨过去。”<br>
+我：“奶奶，你要等到豆腐皮读大学，你会等到的。”<br>
+奶奶，你怎么会过不去，你还没享过几天福。<br>
+等以后，我还想带着我妈和你，带着咱一家出去走走。<br>
+还想听听你讲的那些故事。</p>
+<blockquote>
+<h2 id="写在最后">写在最后</h2>
+</blockquote>
+<p>以前总认为生活要好好规划，但猛然察觉，现在的生活，又有哪一步是我以前所规划过的。<br>
+不过是每一次意外的结果，让我选择了这样的生活。<br>
+有好有坏。<br>
+最大的好，是遇到了这些人。<br>
+每一年都感觉过年变得越来越没意思。<br>
+但每一次除夕夜，我们都像过去那样袒露着自己。<br>
+路灯下的我们重叠在一起，未曾分离。</p>
 ]]></content>
     </entry>
 </feed>
