@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>关于 | Angus的源部落</title>
+<title>图测试 | Angus的源部落</title>
 <meta name="description" content="终其一生，我们都在自我救赎">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,24 +86,43 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">关于</h2>
+          <h2 class="post-title">图测试</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-01-25</span>
+            <span><i class="icon-calendar-outline"></i> 2019-10-07</span>
             
           </div>
           <div class="post-content">
-            <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+            <pre><code class="language-mermaid">sequenceDiagram
+	participant c as 客户端
+	participant s as 服务端
+	participant d as 数据库
+	
+	c--&gt;&gt;s: 开启宝箱请求
+	s--&gt;&gt;d: 查询用户宝箱记录表
+	d-&gt;&gt;s: 返回用户为未打开宝箱数量
+	alt 宝箱数量小于等于0
+		s-&gt;&gt;c: 返回错误信息
+	else 宝箱数量大于0
+		s--&gt;&gt;d: 查询用户宝箱记录表
+		d-&gt;&gt;s: 返回用户最久未打开的宝箱
+		s-&gt;&gt;s: 处理宝箱奖品逻辑
+		s--&gt;&gt;d: 更新宝箱状态（opend=true）
+		s-&gt;&gt;c: 返回宝箱信息
+	end
+</code></pre>
 
           </div>
         </div>
 
         
+          <div class="next-post">
+            <a class="purple-link" href="https://angus-liu.github.io/post/2017-12-18-Morality-defense">
+              <h3 class="post-title">
+                下一篇：德育中期答辩
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
       
