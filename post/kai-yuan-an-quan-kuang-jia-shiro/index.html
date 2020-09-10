@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>开源安全框架 - Shiro | Angus的源部落</title>
+<meta name="description" content="莫道儒冠误此生，从来诗书不负人">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://angus-liu.cn/favicon.ico?v=1599704842007">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://angus-liu.cn/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://angus-liu.cn">
+        <img class="avatar" src="https://angus-liu.cn/images/avatar.png?v=1599704842007" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://angus-liu.cn">
+        <h1 class="site-title">Angus的源部落</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">开源安全框架 - Shiro</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-09-10</span>
+            
+          </div>
+          <div class="post-content">
+            <h1 id="shiro">Shiro</h1>
+<blockquote>
+<p><a href="http://shiro.apache.org/index.html">Apache Shiro</a></p>
+</blockquote>
+<h2 id="apche-shiro-简介"># Apche Shiro 简介</h2>
+<blockquote>
+<p><a href="http://shiro.apache.org/introduction.html#introduction-to-apache-shiro">Introduction to Apache Shiro</a></p>
+</blockquote>
+<h3 id="apche-shiro-是什么">Apche Shiro 是什么？</h3>
+<p>Apache Shiro 是一个功能强大且灵活的开源安全框架，它可以清晰地处理身份验证、授权、企业会话管理，以及加密。</p>
+<p>Apache Shiro 的首要目标是易于使用和理解。安全机制的实现有时可能非常复杂，甚至会让人觉得痛苦，但并非必须如此。框架应该尽可能地掩盖复杂性，并提供简洁直观的 API，以简化开发人员为确保应用程序的安全所做的工作。</p>
+<p>以下是一些借助 Apache Shiro 可以做的事情：</p>
+<ul>
+<li>
+<p>对用户进行身份验证</p>
+</li>
+<li>
+<p>对用户执行访问控制，例如：</p>
+<ul>
+<li>确定是否为用户分配了某个安全角色</li>
+<li>确定是否允许用户执行某些操作</li>
+</ul>
+</li>
+<li>
+<p>可以在任何环境中使用 Session API，即使没有 Web 或 EJB容器</p>
+</li>
+<li>
+<p>在身份验证、访问控制或会话生命周期内对事件作出反应</p>
+</li>
+<li>
+<p>聚合一个或多个用户安全数据数据源，并将其呈现为单个复合用户“视图”</p>
+</li>
+<li>
+<p>启用单点登录(SSO)功能</p>
+</li>
+<li>
+<p>启用“记住我（Remember Me）”服务，无须登录便可与用户建立关联</p>
+<p>……</p>
+<p>更重要的是，以上全部都集成在一个内聚且易于使用的 API 中。</p>
+</li>
+</ul>
+<p>Shiro 尝试为所有应用程序环境实现这些目标——从最简单的命令行应用程序到最大的企业应用程序，并且不强制依赖其他第三方框架，容器或应用程序服务器。当然，该项目旨在尽可能地集成到这些环境中，但它也可以在其他任何环境中开箱即用。</p>
+<h3 id="apache-shiro-特性">Apache Shiro 特性</h3>
+<p>Apache Shiro 是一个具有许多功能的综合应用程序安全框架。下图显示了 Shiro 的主要关注点，本参考手册将以类似方式进行组织：</p>
+<figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroFeatures.png" alt="img"></figure>
+<p>Shiro 针对的是 Shiro 开发团队所称的“应用程序安全的四大基石”——身份验证，授权，会话管理和加密：</p>
+<ul>
+<li><strong>身份验证（Authentication）：</strong> 有时称之为“登录”，该行为用以证明用户是他们所说的那个人。</li>
+<li><strong>授权（Authorization）：</strong> 访问控制的过程，即确定“谁”可以访问“什么”。</li>
+<li><strong>会话管理（Session Management）：</strong> 管理特定于用户的会话，即使不在 Web 或 EJB 应用程序中。</li>
+<li><strong>加密（Cryptography）：</strong> 使用加密算法保证数据安全，同时要易于使用。</li>
+</ul>
+<p>在不同的应用程序环境中，还有其他特性支持和加强这些关注点，特别是：</p>
+<ul>
+<li>Web 支持：Shiro 的 Web 支持 API 可帮助 Web 应用程序轻松地获取保护。</li>
+<li>缓存：缓存是 Apache Shiro API 中的一级公民，可确保安全操作保持快速和高效。</li>
+<li>并发：Apache Shiro 的并发特性使其支持多线程应用程序。</li>
+<li>测试：对测试的支持，可以帮助您编写单元和集成测试，确保你的代码如预期的那样得到保护。</li>
+<li>“Run As”：允许用户假定为其他用户身份（如果允许）的功能，有时在管理场景中很有用。</li>
+<li>“记住我（Remember Me）”：记住用户在不同会话中的身份，因此用户只需在强制登录时才进行登录。</li>
+</ul>
+<h2 id="apache-shiro-架构"># Apache Shiro 架构</h2>
+<blockquote>
+<p><a href="http://shiro.apache.org/architecture.html#apache-shiro-architecture">Apache Shiro Architecture</a></p>
+</blockquote>
+<p>Apache Shiro 的设计目标是通过直观性和易用性来简化应用程序安全性的实现。在某人（或某物）与应用程序交互的上下文中，Shiro 的核心设计模拟了大多数人对应用程序安全性的看法。</p>
+<p>软件应用通常基于用户故事设计。也就是说，你通常会根据用户将要（或应该）怎么与软件交互的方式设计用户界面或服务API。例如，你可能会说，“与我的应用程序交互时，如果用户已经登陆，就会向他们显示一个按钮，他们可以单击该按钮查看其帐户信息。如果没有登录，则显示一个注册按钮。“</p>
+<p>这个例子表明，编写应用程序主要是为了满足用户的需求。即使当前正与软件进行交互的“用户”不是人类，而是另一个软件系统，你仍然需要编写代码反映其行为。</p>
+<p>Shiro 在自己的设计中体现了这些概念。通过搭配对软件开发人员来说已经很直观的内容，Apache Shiro 在几乎任何应用程序中都能保持直观和易于使用。</p>
+<h3 id="高层概述">高层概述</h3>
+<p>在最高层次的概念上，Shiro 的架构有 3 个主要概念：<code>Subject</code>、<code>SecurityManager</code> 和 <code>Realms</code>。下图是这些组件如何交互的高级概述，我们将介绍其中的每个概念：</p>
+<figure data-type="image" tabindex="2"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroBasicArchitecture.png" alt="img"></figure>
+<ul>
+<li>
+<p><strong>Subject</strong>：正如我们在<a href="http://shiro.apache.org/tutorial.html">教程</a>中提到的，<code>Subject</code> 本质上是当前正在进行操作的用户特定于安全性的“视图”。虽然“用户”这个词通常意味着一个人，但 <code>Subject</code> 可以是一个人，也可以代表第三方服务、守护进程帐户，cron作业或任何类似的东西 —— 基本上是当前与软件交互的任何东西。</p>
+<p><code>Subject</code> 实例都被绑定（并且需要）到一个 <code>SecurityManager</code> 上。当你与一个 <code>Subject</code> 进行交互时，这些交互将转换为与 <code>SecurityManager</code> 特定于主题的交互。</p>
+</li>
+<li>
+<p><strong>SecurityManager</strong>：<code>SecurityManager</code> 是 Shiro 架构的核心，它充当着“伞形”对象的角色，以协调其内部安全组件，共同构成一个对象图。值得注意的是，一旦为应用程序配置了 <code>SecurityManager</code> 及其内部对象图，通常就不需要再管它了，应用程序开发人员几乎将所有时间花在 <code>Subject</code> API上。</p>
+<p>稍后我们将详细讨论 <code>SecurityManager</code>，但重要的是要意识到，当你与 <code>Subject</code> 交互时，实际上是 <code>SecurityManager</code> 在幕后为 <code>Subject</code> 承担了所有繁重的工作。这反映在上面的基本流程图中。</p>
+</li>
+<li>
+<p><strong>Realms</strong>：Realm 充当 Shiro 与应用程序安全数据之间的“桥梁”或“连接器”。当需要与与安全相关的数据（如用户帐户）进行实际交互以执行身份验证（登录）和授权（访问控制）时，Shiro 会从一个或多个为应用程序配置的 Realm 中查找这些内容。</p>
+<p>从这个意义上讲，Realm 本质上是一个特定于安全性的 <a href="https://en.wikipedia.org/wiki/Data_access_object">DAO</a>：它封装了数据源的连接细节，并根据需要将相关数据提供给 Shiro。配置Shiro时，必须至少指定一个 Realm 用于身份验证和（或）授权。<code>SecurityManager</code> 可以配置多个 Realm，且至少需要一个。</p>
+<p>Shiro 提供了开箱即用的 Realm，可以连接到许多安全数据源（也称目录），如 LDAP、关系数据库（JDBC）、文本配置源（如INI和属性文件）等。如果缺省 Realm 不满足你的需求，你可以插入自己的 Realm 实现来表示自定义数据源。</p>
+<p>与其他内部组件一样，Shiro <code>SecurityManager</code> 管理着如何使用 Realm 来获取将被表示为 <code>Subject</code> 实例的安全数据和标识数据。</p>
+</li>
+</ul>
+<h3 id="详细架构">详细架构</h3>
+<p>下图展示了 Shiro 的核心架构概念，并对每个概念进行了简短的总结:</p>
+<figure data-type="image" tabindex="3"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroArchitecture.png" alt="img"></figure>
+<ul>
+<li><strong>Subject</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/subject/Subject.html">org.apache.shiro.subject.Subject</a>）<br>
+当前与软件交互的实体（用户，第三方服务，cron 作业等）特定于安全性的“视图”。</li>
+<li><strong>SecurityManager</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/mgt/SecurityManager.html">org.apache.shiro.mgt.SecurityManager</a>）<br>
+如上所述，<code>SecurityManager</code> 是 Shiro 架构的核心。它主要是一个“伞形”对象，协调其托管组件，以确保它们一起平稳运行。它还管理每个应用程序用户的 Shiro 视图，因此它知道如何对每个用户执行安全操作。</li>
+<li><strong>Authenticator</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/Authenticator.html">org.apache.shiro.authc.Authenticator</a>）<br>
+<code>Authenticator</code> 是负责执行和响应用户身份验证（登录）尝试的组件。当用户尝试登录时，将由<code>Authenticator</code> 执行该逻辑。<code>Authenticator</code> 知道如何与存储相关用户/帐户信息的一个或多个 Realm 进行协调。从这些 Realm 获得的数据将用于验证用户的身份，以确保用户确实是他们所说的那个人。
+<ul>
+<li><strong>Authentication Strategy</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/pam/AuthenticationStrategy.html">org.apache.shiro.authc.pam.AuthenticationStrategy</a>）<br>
+如果配置了多个 Realm，<code>AuthenticationStrategy</code> 将对 Realm 进行协调以确定身份验证成功或失败的条件（例如，如果一个 Realm 验证成功但其他 Realm 失败，这次尝试是否成功？还是说需要所有 Realm 都验证成功？抑或是只需要第一个 Realm 验证成功就可以？）。</li>
+</ul>
+</li>
+<li><strong>Authorizer</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authz/Authorizer.html">org.apache.shiro.authz.Authorizer</a>）<br>
+<code>Authorizer</code> 是负责确定应用程序中用户访问控制的组件。它是一种最终决定用户是否被允许做某事的机制。与 <code>Authenticator</code> 类似，<code>Authorizer</code> 也知道如何协调多个后端数据源，以访问角色和权限信息。<code>Authorizer</code> 使用这些信息来确定是否允许用户执行特定的操作。</li>
+<li><strong>SessionManager</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/session/mgt/SessionManager.html">org.apache.shiro.session.mgt.SessionManager</a>）<br>
+<code>SessionManager</code> 知道如何创建和管理用户 <code>Session</code> 生命周期，为所有环境中的用户提供健壮的会话体验。这是安全框架领域的一个独特特性——即使没有可用的 Web、Servlet 或 EJB 容器，Shiro 也能够在任何环境中管理用户 Sessions。默认情况下，Shiro 将使用现有的会话机制（例如 Servlet 容器），但若是没有，比如在独立应用程序或非 Web 环境中，它将使用其内置的企业会话管理提供相同的编程过程。<code>SessionDAO</code> 的存在允许任何数据源用于持久会话。
+<ul>
+<li><strong>SessionDAO</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/session/mgt/eis/SessionDAO.html">org.apache.shiro.session.mgt.eis.SessionDAO</a>）<br>
+<code>SessionDAO</code> 代表 <code>SessionManager</code> 执行 <code>Session</code> 持久性（CRUD）操作。这允许将任何数据存储插入会话管理基础结构。</li>
+</ul>
+</li>
+<li><strong>CacheManager</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/cache/CacheManager.html">org.apache.shiro.cache.CacheManager</a>）<br>
+<code>CacheManager</code> 负责创建和管理其他 <code>Shiro</code> 组件使用的 <code>Cache</code> 实例生命周期。由于 Shiro 可以访问许多后端数据源以进行身份验证，授权和会话管理，因此缓存一直是框架中极其重要的架构特性，其可以在使用这些数据源时提高性能。任何现代开源的或企业缓存产品都可以插入 Shiro，以提供快速有效的用户体验。</li>
+<li><strong>Cryptography</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/crypto/package-summary.html">org.apache.shiro.crypto.*</a>）<br>
+加密机制是企业安全框架的自然补充。Shiro 的 <code>crypto</code> 软件包包含了易于使用和理解的密码、哈希（亦称摘要）和不同编解码器的实现。该软件包中的所有类都经过精心设计，易于使用且易于理解。使用 Java 原生加密支持的人都知道，它就像种很难被驯服的动物。Shiro 的 <code>crypto</code> API 简化了复杂的 Java 机制，使普通人易于使用。</li>
+<li><strong>Realms</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/realm/Realm.html">org.apache.shiro.realm.Realm</a>）<br>
+如上所述，Realm 充当 Shiro 与应用程序安全数据之间的“桥接”或“连接器”。当需要与安全相关的数据（如用户帐户）进行实际交互以执行身份验证（登录）和授权（访问控制）时，Shiro 会从一个或多个为应用程序配置的 Realm 中查找这些内容。你可以根据需要配置任意多个 Realm（通常每个数据源一个），Shiro 将根据身份验证和授权的需要与它们进行协调。</li>
+</ul>
+<h3 id="securitymanager">SecurityManager</h3>
+<p>由于 Shiro 的API鼓励以 <code>Subject</code> 为中心的编程方法，所以大多数应用程序开发人员很少直接与<code>SecurityManager</code> 交互（框架开发人员有时可能会发现它很有用）。即便如此，了解 <code>SecurityManager</code> 功能仍然很重要，尤其是在为应用程序配置 <code>SecurityManager</code> 时。</p>
+<h3 id="设计">设计</h3>
+<p>如前所述，应用程序的 <code>SecurityManager</code> 负责执行安全操作并管理所有应用程序用户的状态。在 Shiro 的默认 <code>SecurityManager</code> 实现中，这包括：</p>
+<ul>
+<li>Authentication（认证）</li>
+<li>Authorization（授权）</li>
+<li>Session Management（会话管理）</li>
+<li>Cache Management（缓存管理）</li>
+<li><a href="http://shiro.apache.org/realm.html">Realm</a> coordination（Realm 协调）</li>
+<li>Event propagation（事件传播）</li>
+<li>“Remember Me” Services（“记住我”服务）</li>
+<li>Subject creation（Subject 创建）</li>
+<li>Logout and more （登出等）</li>
+</ul>
+<p>这只是尝试在单个组件中管理这么多的功能。如果将所有内容集中到一个实现类中，那么要使这些东西具有灵活性和可定制性将非常困难。</p>
+<p>为了简化配置并实现灵活的配置和可插拔性，Shiro 的实现都是高度模块化的设计——模块化程度如此之高，以至于 SecurityManager 实现(及其类层次结构)根本做不了什么。相反，这些 <code>SecurityManager</code> 实现主要充当轻量级“容器”组件，将几乎将所有行为委托给嵌套和包装组件。这种“包装”设计反映在上面的详细架构图中。</p>
+<p>当组件实际执行逻辑时，<code>SecurityManager</code> 实现知道如何以及何时协调组件以获得正确的行为。</p>
+<p><code>SecurityManager</code> 的实现和组件也兼容 JavaBean，它允许你(或配置机制)通过标准 JavaBean 访问器和修改器方法（get*/set*）轻松定制可插入组件。这意味着 Shiro 的体系结构模块化可以为自定义行为转化为非常容易的配置。</p>
+<blockquote>
+<p>易于配置：因为 JavaBean 的兼容性，通过任何支持 JavaBean 样式配置的机制，例如 <a href="http://shiro.apache.org/spring.html">Spring</a>，Guice，JBoss等，都可以很容易地使用自定义组件配置 <code>SecurityManager</code>。</p>
+</blockquote>
+<h2 id="apache-shiro-术语"># Apache Shiro 术语</h2>
+<blockquote>
+<p><a href="http://shiro.apache.org/terminology.html#apache-shiro-terminology">Apache Shiro Terminology</a></p>
+</blockquote>
+<h2 id="10-分钟教程"># 10 分钟教程</h2>
+<blockquote>
+<p><a href="http://shiro.apache.org/10-minute-tutorial.html">10 Minute Tutorial on Apache Shiro</a></p>
+</blockquote>
+<h3 id="介绍">介绍</h3>
+<p>欢迎来到 Apache Shiro 的 10 分钟教程！</p>
+<p>通过这个简单快速的教程，你可以完全理解开发人员如何在应用程序中使用 Shiro。你应该可以在10分钟内完成。</p>
+<h3 id="概述">概述</h3>
+<p>Apache Shiro 是什么？</p>
+<p>Apache Shiro 是一个功能强大且易于使用的 Java 安全框架，它为开发人员提供了一种直观且全面的身份验证、授权、加密和会话管理解决方案。</p>
+<p>实际上，它实现了管理应用程序安全性的所有方面，同时尽可能不碍事。它建立在良好的接口驱动设计和 OO 原则之上，在你能够想象的任何地方都支持自定义行为。此外，对于一切它都有合理的默认值，是应用程序安全性所能做到的最大程度的“不干涉（hands off）”。至少这是我们所追求的。</p>
+<p>Apache Shiro 可以做什么？</p>
+<p>太多了🙂。但我们不想让 QuickStart 变得臃肿。如果想了解它能为你做些什么，请查看<a href="http://shiro.apache.org/features.html">功能</a>页面。此外，如果对我们是如何开始的以及我们为什么存在感兴趣，请参阅 <a href="http://shiro.apache.org/what-is-shiro.html">Shiro 的历史和使命</a>页面。</p>
+<p>好的。现在让我们开始吧!</p>
+<blockquote>
+<p>注意：Shiro 可以在任何环境中运行，从最简单的命令行应用程序到最大的企业级 web 和集群应用程序，但在 QuickStart 中，我们将在一个简单的“main”方法中完成这个最简单的示例，这样你就可以对 API 有所了解。</p>
+</blockquote>
+<h3 id="下载">下载</h3>
+<ol>
+<li>
+<p>确保安装了 JDK 1.6+ 和 Maven 3.0.3+。</p>
+</li>
+<li>
+<p>从<a href="http://shiro.apache.org/download.html">下载</a>页面下载最新的“源代码分发（Source Code Distribution）” 。本示例中使用的是 1.4.0 分发版。</p>
+</li>
+<li>
+<p>解压：</p>
+<pre><code class="language-shell">$ unzip shiro-root-1.4.0-source-release.zip
+</code></pre>
+</li>
+<li>
+<p>进入 quickstart 目录：</p>
+<pre><code class="language-shell">$ cd shiro-root-1.4.0/samples/quickstart
+</code></pre>
+</li>
+<li>
+<p>运行 QuickStart：</p>
+<pre><code class="language-shell">$ mvn compile exec:java
+</code></pre>
+</li>
+</ol>
+<p>这个目标只会打印出一些日志消息，让你知道发生了什么，然后就会退出。在阅读本文时，可以随时查看下面的代码 <code>samples/quickstart/src/main/java/Quickstart.java</code>。对它进行修改并根据需要运行上述的  <code>mvn compile exec:java</code> 命令。</p>
+<h3 id="quickstartjava">Quickstart.java</h3>
+<p>上面引用的 <code>Quickstart.java</code> 文件包含了使你熟悉 API 的所有代码。现在让我们把它分成几块，这样你就可以很容易地理解发生了什么。</p>
+<p>在几乎所有的环境中，你都可以通过以下调用方式获取当前正在执行的用户：</p>
+<pre><code class="language-java">Subject currentUser = SecurityUtils.getSubject();
+</code></pre>
+<p>通过 <a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/SecurityUtils.html"><code>SecurityUtils</code></a>.<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/SecurityUtils.html#getSubject--"><code>getSubject()</code></a> 方法，我们可以获得当前正在执行的<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/subject/Subject.html"><code>Subject</code></a>。“Subject”仅仅是应用程序用户特定于安全性的“视图”。实际上，我们本想把它称为“User”，因为这“很有意义”，但是我们决定不这么做：太多的应用程序现有的 API 中已经有了自己的 User 类或框架，我们不想与它们发生冲突。而且，在安全领域，<code>Subject</code> 实际上是公认的术语。好了，继续……</p>
+<p>独立应用程序中的 <code>getSubject()</code> 调用可能返回一个应用程序中指定位置的用户数据对应的 <code>Subject</code>，而在服务器环境（例如 web 应用程序）中， <code>Subject</code> 则基于与当前线程或传入请求相关联的用户数据来获取。</p>
+<p>既然有了 <code>Subject</code>，那能用它来做什么？</p>
+<p>如果你希望在当前会话期间向应用程序用户提供内容，你可以获取其会话：</p>
+<pre><code class="language-java">Session session = currentUser.getSession();
+session.setAttribute( &quot;someKey&quot;, &quot;aValue&quot; );
+</code></pre>
+<p><code>Session</code> 是特定于 Shiro 的实例，它不仅提供了常规 HttpSession 所提供的大部分内容，而且还有一些额外的好处和一个<strong>很大的</strong>区别：它不需要HTTP环境！</p>
+<p>如果在 Web 应用程序内部部署，默认情况下 <code>Session</code> 将基于 <code>HttpSession</code>。但是，在非 Web 环境中，比如这个简单的 Quickstart，Shiro 默认会自动使用其自带的企业会话管理。这意味着无论部署环境如何，你都可以在任何层中的应用程序中使用相同的API。这打开了一个全新的应用程序世界，任何需要会话的应用程序都不需要被强制使用 <code>HttpSession</code> 或 EJB Stateful Session Bean。而且，任何客户端技术现在都可以共享会话数据。</p>
+<p>现在你可以获得一个 <code>Subject</code> 和它们的 <code>Session</code>。那么真正有用的东西呢，比如检查是否允许它们执行某些操作，或者检查角色和权限?</p>
+<p>我们只能对已知用户进行检查。<code>Subject</code> 上面的实例代表当前用户，但“谁”是当前用户？目前，他们是匿名的——也就是说，至少需要他们登录一次。所以，让我们这样做：</p>
+<pre><code class="language-java">if ( !currentUser.isAuthenticated() ) {
+    //collect user principals and credentials in a gui specific manner
+    //such as username/password html form, X509 certificate, OpenID, etc.
+    //We'll use the username/password example here since it is the most common.
+    //(do you know what movie this is from? ;)
+    UsernamePasswordToken token = new UsernamePasswordToken(&quot;lonestarr&quot;, &quot;vespa&quot;);
+    //this is all you have to do to support 'remember me' (no config - built in!):
+    token.setRememberMe(true);
+    currentUser.login(token);
+}
+</code></pre>
+<p>就是这样！再简单不过了。</p>
+<p>但如果他们的登录尝试失败了怎们办？通过捕捉各种特定的异常，可以告诉你到底发生了什么，这允许你进行相应的处理和反应：</p>
+<pre><code class="language-java">try {
+    currentUser.login( token );
+    //if no exception, that's it, we're done!
+} catch ( UnknownAccountException uae ) {
+    //username wasn't in the system, show them an error message?
+} catch ( IncorrectCredentialsException ice ) {
+    //password didn't match, try again?
+} catch ( LockedAccountException lae ) {
+    //account for that username is locked - can't login.  Show them a message?
+}
+    ... more types exceptions to check if you want ...
+} catch ( AuthenticationException ae ) {
+    //unexpected condition - error?
+}
+</code></pre>
+<p>你可以检查许多不同类型的异常，或者针对 Shiro 可能无法解释的自定义条件抛出你自己的异常。有关更多信息，请参阅 <a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/AuthenticationException.html">AuthenticationException JavaDoc</a>。</p>
+<blockquote>
+<p>提示：安全的最佳实践是向用户提供通用的登录失败消息，你应该不想帮助攻击者试图闯入你的系统吧。</p>
+</blockquote>
+<p>好的，到现在为止，我们已经登录了用户。那还能做什么？</p>
+<p>可以让我们看看他们是谁：</p>
+<pre><code class="language-java">//print their identifying principal (in this case, a username): 
+log.info( &quot;User [&quot; + currentUser.getPrincipal() + &quot;] logged in successfully.&quot; );
+</code></pre>
+<p>可以测试他们是否具有特定的角色：</p>
+<pre><code class="language-java">if ( currentUser.hasRole( &quot;schwartz&quot; ) ) {
+    log.info(&quot;May the Schwartz be with you!&quot; );
+} else {
+    log.info( &quot;Hello, mere mortal.&quot; );
+}
+</code></pre>
+<p>还可以看看他们是否有权对某种类型的实体进行操作：</p>
+<pre><code class="language-java">if ( currentUser.isPermitted( &quot;lightsaber:weild&quot; ) ) {
+    log.info(&quot;You may use a lightsaber ring.  Use it wisely.&quot;);
+} else {
+    log.info(&quot;Sorry, lightsaber rings are for schwartz masters only.&quot;);
+}
+</code></pre>
+<p>此外，我们可以执行一个极其强大的“实例级”权限检查——查看用户是否能够访问该类型的特定实例：</p>
+<pre><code class="language-java">if ( currentUser.isPermitted( &quot;winnebago:drive:eagle5&quot; ) ) {
+    log.info(&quot;You are permitted to 'drive' the 'winnebago' with license plate (id) 'eagle5'.  &quot; +
+                &quot;Here are the keys - have fun!&quot;);
+} else {
+    log.info(&quot;Sorry, you aren't allowed to drive the 'eagle5' winnebago!&quot;);
+}
+</code></pre>
+<p>小菜一碟，是吧？</p>
+<p>最后，当用户结束使用应用程序时，他们可以进行注销：</p>
+<pre><code class="language-java">currentUser.logout(); //removes all identifying information and invalidates their session too.
+</code></pre>
+<p>这就是在应用程序开发人员级别使用的 Apache Shiro 的核心内容。虽然有一些相当复杂的东西在幕后进行，使得这个工作如此优雅，但实际上就是这些。</p>
+<p>你心中可能仍有疑惑，“到底是谁负责在登录期间获取用户数据（用户名和密码，角色和权限等），又是谁在运行时实际地去执行这些安全检查？”这些，通过实现 Shiro 所称的 <a href="http://shiro.apache.org/realm.html">Realm</a> 并将其插入 Shiro 的配置中，就可以做到。</p>
+<p>但是，如何配置 <a href="http://shiro.apache.org/realm.html">Realm</a> 在很大程度上取决于你的运行时环境。例如，运行独立应用程序，或是基于 Web 的应用程序，或是基于 Spring 或 JEE 容器的应用程序，抑或是它们的组合。不过这种类型的配置超出了本文的范围，QuickStart 的目的是让你熟悉 API 和 Shiro 的概念。</p>
+<p>当准备好了解更多详细信息时，你肯定希望阅读<a href="http://shiro.apache.org/java-authentication-guide.html">身份验证指南</a>和<a href="http://shiro.apache.org/java-authorization-guide.html">授权指南</a>。然后可以转到其他<a href="http://shiro.apache.org/documentation.html">文档</a>，特别是<a href="http://shiro.apache.org/reference.html">参考手册</a>，可以回答你的任何其他问题。或许你也想加入用户<a href="http://shiro.apache.org/mailing-lists.html">邮件列表</a>——你会发现我们有一个很好的社区，人们愿意尽可能地提供帮助。</p>
+<p>感谢你的关注。希望你能喜欢上 Apache Shiro！</p>
+<h2 id="将-apache-shiro-集成到-springboot-应用程序中"># 将 Apache Shiro 集成到 SpringBoot 应用程序中</h2>
+<blockquote>
+<p><a href="https://shiro.apache.org/spring-boot.html">Integrating Apache Shiro into Spring-Boot Applications</a></p>
+</blockquote>
+<p>Shiro 的 SpringBoot 集成方式是将 Shiro 集成到基于 Spring 的应用程序中的最简单方法，对于更一般的 Spring 框架集成，可以采用<a href="https://shiro.apache.org/spring-framework.html">注解</a>或 <a href="https://shiro.apache.org/spring-xml.html">XML</a>。</p>
+<h3 id="独立应用程序">独立应用程序</h3>
+<p>在你的应用程序类路径中包含 Shiro Spring starter 依赖项（推荐使用 Apache Maven 或 Gradle 等工具来管理）。</p>
+<pre><code>// Apache Maven
+&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.shiro&lt;/groupId&gt;
+    &lt;artifactId&gt;shiro-spring-boot-starter&lt;/artifactId&gt;
+    &lt;version&gt;1.4.1-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;
+
+// Gradle
+compile 'org.apache.shiro:shiro-spring-boot-starter:1.4.1-SNAPSHOT'
+</code></pre>
+<p>剩下的唯一事情是配置一个 <a href="https://shiro.apache.org/realm.html">Realm</a>：</p>
+<pre><code class="language-java">@Bean
+public Realm realm() {
+  ...
+}
+</code></pre>
+<p>设置 Shiro 最简单的方法是使 SecurityUtils.* 方法在所有情况下都能工作，也就是让 <code>SecurityManager</code> bean成为一个静态单例。请勿在 Web 应用程序中执行此操作——请参阅下面的 <a href="https://shiro.apache.org/spring-boot.html#Spring-WebApplications">Web 应用程序</a>部分。</p>
+<pre><code class="language-java">@Autowired
+private SecurityManager securityManager;
+    
+ @PostConstruct
+ private void initStaticSecurityManager() {
+     SecurityUtils.setSecurityManager(securityManager);
+ }
+</code></pre>
+<p>就是这样，现在你可以使用以下方式获取当前 <code>Subject</code> :</p>
+<pre><code class="language-java">SecurityUtils.getSubject();
+</code></pre>
+<p>您可以在 <a href="https://github.com/apache/shiro/tree/master/samples/spring-boot">Github 样例</a>中看到完整的示例。</p>
+<h3 id="web-应用程序">Web 应用程序</h3>
+<p>Shiro 对 Spring Web 应用程序提供了一流的支持。在 Web 应用程序中，所有可通过 Shiro 访问的 Web 请求都必须通过一个主 Shiro 过滤器。这个过滤器本身非常强大，它允许基于任何 URL 路径表达式执行临时自定义过滤器链。</p>
+<p>首先，在你的应用程序类路径中包含 Shiro Spring web starter 依赖项（推荐使用Apache Maven 或 Gradle 之类的工具来管理）。</p>
+<pre><code>// Apache Maven
+&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.shiro&lt;/groupId&gt;
+    &lt;artifactId&gt;shiro-spring-boot-web-starter&lt;/artifactId&gt;
+    &lt;version&gt;1.4.1-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;
+
+// Gradle
+compile 'org.apache.shiro:shiro-spring-boot-web-starter:1.4.1-SNAPSHOT'
+</code></pre>
+<p>提供Realm实现：</p>
+<pre><code class="language-java">@Bean
+public Realm realm() {
+  ...
+}
+</code></pre>
+<p>最后是 <code>ShiroFilterChainDefinition</code>，它将把任何特定于应用程序的路径映射到给定的过滤器，以便允许不同路径进行不同级别的访问。</p>
+<pre><code class="language-java">@Bean
+public ShiroFilterChainDefinition shiroFilterChainDefinition() {
+    DefaultShiroFilterChainDefinition chainDefinition = new DefaultShiroFilterChainDefinition();
+    
+    // logged in users with the 'admin' role
+    chainDefinition.addPathDefinition(&quot;/admin/**&quot;, &quot;authc, roles[admin]&quot;);
+    
+    // logged in users with the 'document:read' permission
+    chainDefinition.addPathDefinition(&quot;/docs/**&quot;, &quot;authc, perms[document:read]&quot;);
+    
+    // all other paths require a logged in user
+    chainDefinition.addPathDefinition(&quot;/**&quot;, &quot;authc&quot;);
+    return chainDefinition;
+}
+</code></pre>
+<p>如果你使用的是 Shiro 的注解，请参阅下面的<a href="https://shiro.apache.org/spring-boot.html#Spring-annotations-web">注解</a>部分。</p>
+<p>您可以在 <a href="https://github.com/apache/shiro/tree/master/samples/spring-boot-web">Github 样例</a>中看到完整的示例。</p>
+<h3 id="启用-shiro-注解">启用 Shiro 注解</h3>
+<p>在独立应用程序和 Web 应用程序中，你可能需要使用 Shiro 的注解进行安全校验（例如 <code>@RequiresRoles</code>、<code>@RequiresPermissions</code> 等），在上面列出的启动方法中，这些注解都会自动启用。</p>
+<p>只需对你的方法进行注解，就可以使用它们：</p>
+<pre><code class="language-java">@RequiresPermissions(&quot;document:read&quot;)
+public void readDocument() {
+    ...
+}
+</code></pre>
+<p><strong>注解和 Web 应用程序</strong></p>
+<p>Shiro 的注解完全支持在 <code>@Controller</code> 类中使用，例如：</p>
+<pre><code class="language-java">@Controller
+public class AccountInfoController {
+
+    @RequiresRoles(&quot;admin&quot;)
+    @RequestMapping(&quot;/admin/config&quot;)
+    public String adminConfig(Model model) {
+        return &quot;view&quot;;
+    }
+}
+</code></pre>
+<p>为此， <code>ShiroFilterChainDefinition</code> bean 中至少需要有一个定义，要么将所有路径配置为可通过 anno（匿名）过滤器访问，要么设置一个过滤器处于 permissive（许可）模式，例如：authcBasic[permissive]。</p>
+<pre><code class="language-java">@Bean
+public ShiroFilterChainDefinition shiroFilterChainDefinition() {
+    DefaultShiroFilterChainDefinition chainDefinition = new DefaultShiroFilterChainDefinition();
+    chainDefinition.addPathDefinition(&quot;/**&quot;, &quot;anon&quot;); // all paths are managed via annotations
+    
+    // or allow basic authentication, but NOT require it.
+    // chainDefinition.addPathDefinition(&quot;/**&quot;, &quot;authcBasic[permissive]&quot;); 
+    return chainDefinition;
+}
+</code></pre>
+<h3 id="缓存">缓存</h3>
+<p>启用缓存就像提供 <a href="http://shiro.apache.org/caching.html">CacheManager</a> bean 一样简单：</p>
+<pre><code class="language-java">@Bean
+protected CacheManager cacheManager() {
+    return new MemoryConstrainedCacheManager();
+}
+</code></pre>
+<h3 id="配置属性">配置属性</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">键</th>
+<th style="text-align:left">默认值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">shiro.enabled</td>
+<td style="text-align:left"><code>true</code></td>
+<td style="text-align:left">启用 Shiro 的 Spring 模块</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.web.enabled</td>
+<td style="text-align:left"><code>true</code></td>
+<td style="text-align:left">启用 Shiro 的 Spring Web 模块</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.annotations.enabled</td>
+<td style="text-align:left"><code>true</code></td>
+<td style="text-align:left">为 Shiro 的注解启用 Spring 支持</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.sessionManager.deleteInvalidSessions</td>
+<td style="text-align:left"><code>true</code></td>
+<td style="text-align:left">从会话存储中删除无效会话</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.sessionManager.sessionIdCookieEnabled</td>
+<td style="text-align:left"><code>true</code></td>
+<td style="text-align:left">为 cookie 启用 session ID，以进行会话跟踪</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.sessionManager.sessionIdUrlRewritingEnabled</td>
+<td style="text-align:left"><code>true</code></td>
+<td style="text-align:left">启用 sessionURL 重写支持</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.userNativeSessionManager</td>
+<td style="text-align:left"><code>false</code></td>
+<td style="text-align:left">如果启用，Shiro 将管理 HTTP session 而不是容器</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.sessionManager.cookie.name</td>
+<td style="text-align:left"><code>JSESSIONID</code></td>
+<td style="text-align:left">session cookie 名称</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.sessionManager.cookie.maxAge</td>
+<td style="text-align:left"><code>-1</code></td>
+<td style="text-align:left">session cookie 最大生存期</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.sessionManager.cookie.domain</td>
+<td style="text-align:left"><code>null</code></td>
+<td style="text-align:left">session cookie 域</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.sessionManager.cookie.path<code>|</code>null`</td>
+<td style="text-align:left">session cookie 路径</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.sessionManager.cookie.secure</td>
+<td style="text-align:left"><code>false</code></td>
+<td style="text-align:left">session cookie 安全标志</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.rememberMeManager.cookie.name</td>
+<td style="text-align:left"><code>rememberMe</code></td>
+<td style="text-align:left">RememberMe  cookie 名称</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.rememberMeManager.cookie.maxAge</td>
+<td style="text-align:left">one year</td>
+<td style="text-align:left">RememberMe cookie 最大生存期</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.rememberMeManager.cookie.domain</td>
+<td style="text-align:left"><code>null</code></td>
+<td style="text-align:left">RememberMe cookie域名</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.rememberMeManager.cookie.path</td>
+<td style="text-align:left"><code>null</code></td>
+<td style="text-align:left">RememberMe cookie路径</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.rememberMeManager.cookie.secure</td>
+<td style="text-align:left"><code>false</code></td>
+<td style="text-align:left">RememberMe cookie安全标志</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.loginUrl</td>
+<td style="text-align:left"><code>/login.jsp</code></td>
+<td style="text-align:left">未经身份验证的用户重定向到登录页面时使用的 Login URL</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.successUrl</td>
+<td style="text-align:left"><code>/</code></td>
+<td style="text-align:left">用户登录后的默认页面（如果在当前会话中无法找到替代页面）</td>
+</tr>
+<tr>
+<td style="text-align:left">shiro.unauthorizedUrl</td>
+<td style="text-align:left"><code>null</code></td>
+<td style="text-align:left">未经授权的用户将被重定向到的页面（403 页面）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>免责声明：本文自豪地借助“Google”和“有道”进行翻译，如果发现不通顺，请向他们提 issue 😀</p>
+</blockquote>
+<h2 id="其他参考资料"># 其他参考资料</h2>
+<blockquote>
+<p><a href="https://segmentfault.com/a/1190000014479154">Shiro用starter方式优雅整合到SpringBoot中</a></p>
+<p>[教你 Shiro 整合 SpringBoot，避开各种坑](</p>
+</blockquote>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu">
+              <h3 class="post-title">
+                下一篇：重构剑法之山重水复疑无路
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">莫道儒冠误此生，从来诗书不负人</div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/Angus-Liu" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+        <a href="https://twitter.com/angus_liu_96" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      
+    
+      
+        <a href="https://weibo.com/GuangSIR" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+        <a href="https://www.zhihu.com/people/guang-xian-sheng-65-33" target="_blank">
+          <i class="fab fa-zhihu"></i>
+        </a>
+      
+    
+      
+    
+  </div>
+  2019 @ <a href="https://github.com/Angus-Liu" target="_blank">Angus Liu</a> | <a class="rss" href="https://angus-liu.cn/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '0287f153452c5a2b474e',
+        clientSecret: '37a5f9b7ebc30a6f0c7a0e1244c38085ee28ff8a',
+        repo: 'Angus-Liu.github.io',
+        owner: 'Angus-Liu',
+        admin: ['Angus-Liu'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
