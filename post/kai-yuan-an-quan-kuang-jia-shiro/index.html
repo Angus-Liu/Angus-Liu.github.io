@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://angus-liu.cn/favicon.ico?v=1601277098539">
+<link rel="shortcut icon" href="https://angus-liu.cn/favicon.ico?v=1601278000172">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://angus-liu.cn/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://angus-liu.cn">
-        <img class="avatar" src="https://angus-liu.cn/images/avatar.png?v=1601277098539" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://angus-liu.cn/images/avatar.png?v=1601278000172" alt="" width="32px" height="32px">
       </a>
       <a href="https://angus-liu.cn">
         <h1 class="site-title">Angus的源部落</h1>
@@ -93,6 +93,16 @@
           <div class="post-info post-detail-info">
             <span><i class="icon-calendar-outline"></i> 2020-09-10</span>
             
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://angus-liu.cn/tag/b9G8jne0Q/">
+                    Shiro
+                    
+                  </a>
+                
+              </span>
+            
           </div>
           <div class="post-content">
             <h1 id="shiro">Shiro</h1>
@@ -139,7 +149,7 @@
 <p>Shiro 尝试为所有应用程序环境实现这些目标——从最简单的命令行应用程序到最大的企业应用程序，并且不强制依赖其他第三方框架，容器或应用程序服务器。当然，该项目旨在尽可能地集成到这些环境中，但它也可以在其他任何环境中开箱即用。</p>
 <h3 id="apache-shiro-特性">Apache Shiro 特性</h3>
 <p>Apache Shiro 是一个具有许多功能的综合应用程序安全框架。下图显示了 Shiro 的主要关注点，本参考手册将以类似方式进行组织：</p>
-<figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroFeatures.png" alt="img"></figure>
+<figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroFeatures.png" alt="img" loading="lazy"></figure>
 <p>Shiro 针对的是 Shiro 开发团队所称的“应用程序安全的四大基石”——身份验证，授权，会话管理和加密：</p>
 <ul>
 <li><strong>身份验证（Authentication）：</strong> 有时称之为“登录”，该行为用以证明用户是他们所说的那个人。</li>
@@ -166,7 +176,7 @@
 <p>Shiro 在自己的设计中体现了这些概念。通过搭配对软件开发人员来说已经很直观的内容，Apache Shiro 在几乎任何应用程序中都能保持直观和易于使用。</p>
 <h3 id="高层概述">高层概述</h3>
 <p>在最高层次的概念上，Shiro 的架构有 3 个主要概念：<code>Subject</code>、<code>SecurityManager</code> 和 <code>Realms</code>。下图是这些组件如何交互的高级概述，我们将介绍其中的每个概念：</p>
-<figure data-type="image" tabindex="2"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroBasicArchitecture.png" alt="img"></figure>
+<figure data-type="image" tabindex="2"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroBasicArchitecture.png" alt="img" loading="lazy"></figure>
 <ul>
 <li>
 <p><strong>Subject</strong>：正如我们在<a href="http://shiro.apache.org/tutorial.html">教程</a>中提到的，<code>Subject</code> 本质上是当前正在进行操作的用户特定于安全性的“视图”。虽然“用户”这个词通常意味着一个人，但 <code>Subject</code> 可以是一个人，也可以代表第三方服务、守护进程帐户，cron作业或任何类似的东西 —— 基本上是当前与软件交互的任何东西。</p>
@@ -185,7 +195,7 @@
 </ul>
 <h3 id="详细架构">详细架构</h3>
 <p>下图展示了 Shiro 的核心架构概念，并对每个概念进行了简短的总结:</p>
-<figure data-type="image" tabindex="3"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroArchitecture.png" alt="img"></figure>
+<figure data-type="image" tabindex="3"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroArchitecture.png" alt="img" loading="lazy"></figure>
 <ul>
 <li><strong>Subject</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/subject/Subject.html">org.apache.shiro.subject.Subject</a>）<br>
 当前与软件交互的实体（用户，第三方服务，cron 作业等）特定于安全性的“视图”。</li>
@@ -603,7 +613,7 @@ protected CacheManager cacheManager() {
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu">
+            <a class="purple-link" href="https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu/">
               <h3 class="post-title">
                 下一篇：重构剑法之山重水复疑无路
               </h3>

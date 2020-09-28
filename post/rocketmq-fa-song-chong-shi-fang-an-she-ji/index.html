@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://angus-liu.cn/favicon.ico?v=1601277098539">
+<link rel="shortcut icon" href="https://angus-liu.cn/favicon.ico?v=1601278000172">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://angus-liu.cn/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://angus-liu.cn">
-        <img class="avatar" src="https://angus-liu.cn/images/avatar.png?v=1601277098539" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://angus-liu.cn/images/avatar.png?v=1601278000172" alt="" width="32px" height="32px">
       </a>
       <a href="https://angus-liu.cn">
         <h1 class="site-title">Angus的源部落</h1>
@@ -96,7 +96,7 @@
               <span>
                 <i class="icon-pricetags-outline"></i>
                 
-                  <a href="https://angus-liu.cn/tag/IML-szgDK">
+                  <a href="https://angus-liu.cn/tag/IML-szgDK/">
                     MQ
                     
                   </a>
@@ -105,7 +105,7 @@
             
           </div>
           <div class="post-content">
-            <figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/Notes/raw/master/Blog/assets/rocketmq_architecture.png" alt="img"></figure>
+            <figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/Notes/raw/master/Blog/assets/rocketmq_architecture.png" alt="img" loading="lazy"></figure>
 <h2 id="基本概念">基本概念</h2>
 <h3 id="消息类型">消息类型</h3>
 <ul>
@@ -240,7 +240,7 @@ Broker -&gt; [*]
 
 @enduml
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="https://github.com/Angus-Liu/Notes/blob/master/Blog/assets/image-20200917180555699.png" alt="image-20200917180555699"></figure>
+<figure data-type="image" tabindex="2"><img src="https://github.com/Angus-Liu/Notes/blob/master/Blog/assets/image-20200917180555699.png" alt="image-20200917180555699" loading="lazy"></figure>
 <pre><code class="language-puml">@startuml
 component Producer as p
 component Broker as b
@@ -264,7 +264,7 @@ rmts --&gt; p
 rmts -up-&gt; rm
 @enduml
 </code></pre>
-<figure data-type="image" tabindex="3"><img src="https://github.com/Angus-Liu/Notes/raw/master/Blog/assets/RocksDB-Retry.png" alt="RocksDB Retry"></figure>
+<figure data-type="image" tabindex="3"><img src="https://github.com/Angus-Liu/Notes/raw/master/Blog/assets/RocksDB-Retry.png" alt="RocksDB Retry" loading="lazy"></figure>
 <h2 id="重试和幂等">重试和幂等</h2>
 <p>网络波动导致消息发送成功，但是 broker 没有返回发送成功状态，触发超时重试，这时候就需要实现消息幂等性，防止消息重复消费。解决办法有两个：</p>
 <ol>
@@ -286,7 +286,7 @@ rmts -up-&gt; rm
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro">
+            <a class="purple-link" href="https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro/">
               <h3 class="post-title">
                 下一篇：开源安全框架 - Shiro
               </h3>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://angus-liu.cn</id>
     <title>Angus的源部落</title>
-    <updated>2020-09-28T07:11:43.006Z</updated>
+    <updated>2020-09-28T07:26:43.659Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://angus-liu.cn"/>
     <link rel="self" href="https://angus-liu.cn/atom.xml"/>
@@ -12,11 +12,11 @@
     <rights>All rights reserved 2020, Angus的源部落</rights>
     <entry>
         <title type="html"><![CDATA[RocketMQ 发送重试方案设计]]></title>
-        <id>https://angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji</id>
-        <link href="https://angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji">
+        <id>https://angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji/</id>
+        <link href="https://angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji/">
         </link>
         <updated>2020-09-28T07:08:20.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/Notes/raw/master/Blog/assets/rocketmq_architecture.png" alt="img"></figure>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/Notes/raw/master/Blog/assets/rocketmq_architecture.png" alt="img" loading="lazy"></figure>
 <h2 id="基本概念">基本概念</h2>
 <h3 id="消息类型">消息类型</h3>
 <ul>
@@ -151,7 +151,7 @@ Broker -&gt; [*]
 
 @enduml
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="https://github.com/Angus-Liu/Notes/blob/master/Blog/assets/image-20200917180555699.png" alt="image-20200917180555699"></figure>
+<figure data-type="image" tabindex="2"><img src="https://github.com/Angus-Liu/Notes/blob/master/Blog/assets/image-20200917180555699.png" alt="image-20200917180555699" loading="lazy"></figure>
 <pre><code class="language-puml">@startuml
 component Producer as p
 component Broker as b
@@ -175,7 +175,7 @@ rmts --&gt; p
 rmts -up-&gt; rm
 @enduml
 </code></pre>
-<figure data-type="image" tabindex="3"><img src="https://github.com/Angus-Liu/Notes/raw/master/Blog/assets/RocksDB-Retry.png" alt="RocksDB Retry"></figure>
+<figure data-type="image" tabindex="3"><img src="https://github.com/Angus-Liu/Notes/raw/master/Blog/assets/RocksDB-Retry.png" alt="RocksDB Retry" loading="lazy"></figure>
 <h2 id="重试和幂等">重试和幂等</h2>
 <p>网络波动导致消息发送成功，但是 broker 没有返回发送成功状态，触发超时重试，这时候就需要实现消息幂等性，防止消息重复消费。解决办法有两个：</p>
 <ol>
@@ -195,8 +195,8 @@ rmts -up-&gt; rm
     </entry>
     <entry>
         <title type="html"><![CDATA[开源安全框架 - Shiro]]></title>
-        <id>https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro</id>
-        <link href="https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro">
+        <id>https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro/</id>
+        <link href="https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro/">
         </link>
         <updated>2020-09-10T02:24:59.000Z</updated>
         <content type="html"><![CDATA[<h1 id="shiro">Shiro</h1>
@@ -243,7 +243,7 @@ rmts -up-&gt; rm
 <p>Shiro 尝试为所有应用程序环境实现这些目标——从最简单的命令行应用程序到最大的企业应用程序，并且不强制依赖其他第三方框架，容器或应用程序服务器。当然，该项目旨在尽可能地集成到这些环境中，但它也可以在其他任何环境中开箱即用。</p>
 <h3 id="apache-shiro-特性">Apache Shiro 特性</h3>
 <p>Apache Shiro 是一个具有许多功能的综合应用程序安全框架。下图显示了 Shiro 的主要关注点，本参考手册将以类似方式进行组织：</p>
-<figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroFeatures.png" alt="img"></figure>
+<figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroFeatures.png" alt="img" loading="lazy"></figure>
 <p>Shiro 针对的是 Shiro 开发团队所称的“应用程序安全的四大基石”——身份验证，授权，会话管理和加密：</p>
 <ul>
 <li><strong>身份验证（Authentication）：</strong> 有时称之为“登录”，该行为用以证明用户是他们所说的那个人。</li>
@@ -270,7 +270,7 @@ rmts -up-&gt; rm
 <p>Shiro 在自己的设计中体现了这些概念。通过搭配对软件开发人员来说已经很直观的内容，Apache Shiro 在几乎任何应用程序中都能保持直观和易于使用。</p>
 <h3 id="高层概述">高层概述</h3>
 <p>在最高层次的概念上，Shiro 的架构有 3 个主要概念：<code>Subject</code>、<code>SecurityManager</code> 和 <code>Realms</code>。下图是这些组件如何交互的高级概述，我们将介绍其中的每个概念：</p>
-<figure data-type="image" tabindex="2"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroBasicArchitecture.png" alt="img"></figure>
+<figure data-type="image" tabindex="2"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroBasicArchitecture.png" alt="img" loading="lazy"></figure>
 <ul>
 <li>
 <p><strong>Subject</strong>：正如我们在<a href="http://shiro.apache.org/tutorial.html">教程</a>中提到的，<code>Subject</code> 本质上是当前正在进行操作的用户特定于安全性的“视图”。虽然“用户”这个词通常意味着一个人，但 <code>Subject</code> 可以是一个人，也可以代表第三方服务、守护进程帐户，cron作业或任何类似的东西 —— 基本上是当前与软件交互的任何东西。</p>
@@ -289,7 +289,7 @@ rmts -up-&gt; rm
 </ul>
 <h3 id="详细架构">详细架构</h3>
 <p>下图展示了 Shiro 的核心架构概念，并对每个概念进行了简短的总结:</p>
-<figure data-type="image" tabindex="3"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroArchitecture.png" alt="img"></figure>
+<figure data-type="image" tabindex="3"><img src="https://github.com/Angus-Liu/mtbox/raw/master/docs/shiro/assets/ShiroArchitecture.png" alt="img" loading="lazy"></figure>
 <ul>
 <li><strong>Subject</strong>（<a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/subject/Subject.html">org.apache.shiro.subject.Subject</a>）<br>
 当前与软件交互的实体（用户，第三方服务，cron 作业等）特定于安全性的“视图”。</li>
@@ -705,8 +705,8 @@ protected CacheManager cacheManager() {
     </entry>
     <entry>
         <title type="html"><![CDATA[重构剑法之山重水复疑无路]]></title>
-        <id>https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu</id>
-        <link href="https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu">
+        <id>https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu/</id>
+        <link href="https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu/">
         </link>
         <updated>2020-09-07T10:55:33.000Z</updated>
         <content type="html"><![CDATA[<h1 id="重构剑法之山重水复疑无路">重构剑法之山重水复疑无路</h1>
@@ -778,8 +778,8 @@ protected CacheManager cacheManager() {
     </entry>
     <entry>
         <title type="html"><![CDATA[德育中期答辩]]></title>
-        <id>https://angus-liu.cn/post/2017-12-18-Morality-defense</id>
-        <link href="https://angus-liu.cn/post/2017-12-18-Morality-defense">
+        <id>https://angus-liu.cn/post/2017-12-18-Morality-defense/</id>
+        <link href="https://angus-liu.cn/post/2017-12-18-Morality-defense/">
         </link>
         <updated>2017-12-17T23:46:03.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -840,8 +840,8 @@ protected CacheManager cacheManager() {
     </entry>
     <entry>
         <title type="html"><![CDATA[二十一克]]></title>
-        <id>https://angus-liu.cn/post/2017-04-17-21-grams</id>
-        <link href="https://angus-liu.cn/post/2017-04-17-21-grams">
+        <id>https://angus-liu.cn/post/2017-04-17-21-grams/</id>
+        <link href="https://angus-liu.cn/post/2017-04-17-21-grams/">
         </link>
         <updated>2017-04-17T12:10:05.000Z</updated>
         <content type="html"><![CDATA[<h1 id="二十一克-灵魂之重">二十一克-灵魂之重</h1>
@@ -907,8 +907,8 @@ protected CacheManager cacheManager() {
     </entry>
     <entry>
         <title type="html"><![CDATA[过年（写于节后）]]></title>
-        <id>https://angus-liu.cn/post/2017-02-06-Spring-Festival</id>
-        <link href="https://angus-liu.cn/post/2017-02-06-Spring-Festival">
+        <id>https://angus-liu.cn/post/2017-02-06-Spring-Festival/</id>
+        <link href="https://angus-liu.cn/post/2017-02-06-Spring-Festival/">
         </link>
         <updated>2017-02-06T11:25:53.000Z</updated>
         <content type="html"><![CDATA[<h1 id="过年">过年</h1>
