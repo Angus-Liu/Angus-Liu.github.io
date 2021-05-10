@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://angus-liu.cn</id>
+    <id>http://www.angus-liu.cn</id>
     <title>Angus的源部落</title>
-    <updated>2021-05-10T11:51:30.719Z</updated>
+    <updated>2021-05-10T11:58:52.609Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://angus-liu.cn"/>
-    <link rel="self" href="https://angus-liu.cn/atom.xml"/>
+    <link rel="alternate" href="http://www.angus-liu.cn"/>
+    <link rel="self" href="http://www.angus-liu.cn/atom.xml"/>
     <subtitle>莫道儒冠误此生，从来诗书不负人</subtitle>
-    <logo>https://angus-liu.cn/images/avatar.png</logo>
-    <icon>https://angus-liu.cn/favicon.ico</icon>
+    <logo>http://www.angus-liu.cn/images/avatar.png</logo>
+    <icon>http://www.angus-liu.cn/favicon.ico</icon>
     <rights>All rights reserved 2021, Angus的源部落</rights>
     <entry>
         <title type="html"><![CDATA[RocketMQ 发送重试方案设计]]></title>
-        <id>https://angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji/</id>
-        <link href="https://angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji/">
+        <id>http://www.angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji/</id>
+        <link href="http://www.angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji/">
         </link>
         <updated>2020-09-28T07:08:20.000Z</updated>
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://github.com/Angus-Liu/Notes/raw/master/Blog/assets/rocketmq_architecture.png" alt="img" loading="lazy"></figure>
@@ -195,8 +195,8 @@ rmts -up-&gt; rm
     </entry>
     <entry>
         <title type="html"><![CDATA[开源安全框架 - Shiro]]></title>
-        <id>https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro/</id>
-        <link href="https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro/">
+        <id>http://www.angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro/</id>
+        <link href="http://www.angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro/">
         </link>
         <updated>2020-09-10T02:24:59.000Z</updated>
         <content type="html"><![CDATA[<h1 id="shiro">Shiro</h1>
@@ -705,8 +705,8 @@ protected CacheManager cacheManager() {
     </entry>
     <entry>
         <title type="html"><![CDATA[重构剑法之山重水复疑无路]]></title>
-        <id>https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu/</id>
-        <link href="https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu/">
+        <id>http://www.angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu/</id>
+        <link href="http://www.angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu/">
         </link>
         <updated>2020-09-07T10:55:33.000Z</updated>
         <content type="html"><![CDATA[<h1 id="重构剑法之山重水复疑无路">重构剑法之山重水复疑无路</h1>
@@ -778,8 +778,8 @@ protected CacheManager cacheManager() {
     </entry>
     <entry>
         <title type="html"><![CDATA[德育中期答辩]]></title>
-        <id>https://angus-liu.cn/post/2017-12-18-Morality-defense/</id>
-        <link href="https://angus-liu.cn/post/2017-12-18-Morality-defense/">
+        <id>http://www.angus-liu.cn/post/2017-12-18-Morality-defense/</id>
+        <link href="http://www.angus-liu.cn/post/2017-12-18-Morality-defense/">
         </link>
         <updated>2017-12-17T23:46:03.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -840,8 +840,8 @@ protected CacheManager cacheManager() {
     </entry>
     <entry>
         <title type="html"><![CDATA[二十一克]]></title>
-        <id>https://angus-liu.cn/post/2017-04-17-21-grams/</id>
-        <link href="https://angus-liu.cn/post/2017-04-17-21-grams/">
+        <id>http://www.angus-liu.cn/post/2017-04-17-21-grams/</id>
+        <link href="http://www.angus-liu.cn/post/2017-04-17-21-grams/">
         </link>
         <updated>2017-04-17T12:10:05.000Z</updated>
         <content type="html"><![CDATA[<h1 id="二十一克-灵魂之重">二十一克-灵魂之重</h1>
@@ -907,8 +907,8 @@ protected CacheManager cacheManager() {
     </entry>
     <entry>
         <title type="html"><![CDATA[过年（写于节后）]]></title>
-        <id>https://angus-liu.cn/post/2017-02-06-Spring-Festival/</id>
-        <link href="https://angus-liu.cn/post/2017-02-06-Spring-Festival/">
+        <id>http://www.angus-liu.cn/post/2017-02-06-Spring-Festival/</id>
+        <link href="http://www.angus-liu.cn/post/2017-02-06-Spring-Festival/">
         </link>
         <updated>2017-02-06T11:25:53.000Z</updated>
         <content type="html"><![CDATA[<h1 id="过年">过年</h1>
