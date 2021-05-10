@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://angus-liu.cn</id>
     <title>Angus的源部落</title>
-    <updated>2021-05-10T11:45:23.380Z</updated>
+    <updated>2021-05-10T11:51:30.719Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://angus-liu.cn"/>
     <link rel="self" href="https://angus-liu.cn/atom.xml"/>
@@ -10,18 +10,6 @@
     <logo>https://angus-liu.cn/images/avatar.png</logo>
     <icon>https://angus-liu.cn/favicon.ico</icon>
     <rights>All rights reserved 2021, Angus的源部落</rights>
-    <entry>
-        <title type="html"><![CDATA[关于我]]></title>
-        <id>https://angus-liu.cn/post/guan-yu-wo/</id>
-        <link href="https://angus-liu.cn/post/guan-yu-wo/">
-        </link>
-        <updated>2020-11-20T09:12:24.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="项目">项目</h3>
-<ul>
-<li>MTBOX：<a href="https://www.angus-liu.cn/MTBOX/">https://www.angus-liu.cn/MTBOX/</a></li>
-</ul>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[RocketMQ 发送重试方案设计]]></title>
         <id>https://angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji/</id>
