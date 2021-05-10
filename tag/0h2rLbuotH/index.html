@@ -1,260 +1,223 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>随感 | Angus的源部落</title>
-<meta name="description" content="莫道儒冠误此生，从来诗书不负人">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
+<meta name="description" content="莫道儒冠误此生，从来诗书不负人" />
+<link rel="shortcut icon" href="https://angus-liu.cn/favicon.ico?v=1620647118509">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://angus-liu.cn/favicon.ico?v=1601278705017">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://angus-liu.cn/styles/main.css">
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://angus-liu.cn">
-        <img class="avatar" src="https://angus-liu.cn/images/avatar.png?v=1601278705017" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://angus-liu.cn">
-        <h1 class="site-title">Angus的源部落</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://angus-liu.cn">
+  <img class="avatar" src="https://angus-liu.cn/images/avatar.png?v=1620647118509" alt="">
+  </a>
+  <h1 class="site-title">
+    Angus的源部落
+  </h1>
+  <p class="site-description">
+    莫道儒冠误此生，从来诗书不负人
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
   </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
-
-        <div class="current-tag-container">
-          <h2 class="title">
-            <i class="icon icon-pricetags-outline"></i> 随感
-          </h2> 
-        </div>
-
-        
-<section class="post-item">
-    <div class="content">
-      <a href="https://angus-liu.cn/post/2017-12-18-Morality-defense/">
-        <h2 class="post-title">德育中期答辩</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2017-12-18</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://angus-liu.cn/tag/NGNalz73s0/">
-                生活
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://angus-liu.cn/tag/0h2rLbuotH/">
-                随感
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://angus-liu.cn/post/2017-12-18-Morality-defense/">
-        <div class="feature-container" style="background-image: url('https://i.loli.net/2017/12/18/5a37050f027f3.jpg')">
-        </div>
-      </a>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://angus-liu.cn/post/2017-04-17-21-grams/">
-        <h2 class="post-title">二十一克</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2017-04-17</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://angus-liu.cn/tag/NGNalz73s0/">
-                生活
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://angus-liu.cn/tag/0h2rLbuotH/">
-                随感
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://angus-liu.cn/post/2017-02-06-Spring-Festival/">
-        <h2 class="post-title">过年（写于节后）</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2017-02-06</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://angus-liu.cn/tag/NGNalz73s0/">
-                生活
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://angus-liu.cn/tag/0h2rLbuotH/">
-                随感
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://angus-liu.cn/post/2017-02-06-Spring-Festival/">
-        <div class="feature-container" style="background-image: url('https://i.loli.net/2017/08/09/598b048f21a92.jpg')">
-        </div>
-      </a>
-    
-  </section>
-
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
-
-      <div class="site-footer">
-  <div class="slogan">莫道儒冠误此生，从来诗书不负人</div>
   <div class="social-container">
     
       
-        <a href="https://github.com/Angus-Liu" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
+    
       
     
       
-        <a href="https://twitter.com/angus_liu_96" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      
     
-      
-        <a href="https://weibo.com/GuangSIR" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.zhihu.com/people/guang-xian-sheng-65-33" target="_blank">
-          <i class="fab fa-zhihu"></i>
-        </a>
       
     
       
     
   </div>
-  2019-2020 @ <a href="https://github.com/Angus-Liu" target="_blank">Angus Liu</a> | <a class="rss" href="https://angus-liu.cn/atom.xml" target="_blank">RSS</a>
 </div>
 
+        <div class="current-tag-container">
+            <h2 class="title">
+                标签：# 随感
+            </h2> 
+        </div>
+        <div class="post-container">
+  
+    <article class="post">
+      <a href="https://angus-liu.cn/post/2017-12-18-Morality-defense/">
+        <h2 class="post-title">德育中期答辩</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2017-12-18
+        </span>
+        <span>
+          14 min read
+        </span>
+        
+          <a href="https://angus-liu.cn/tag/NGNalz73s0/" class="post-tag">
+            # 生活
+          </a>
+        
+          <a href="https://angus-liu.cn/tag/0h2rLbuotH/" class="post-tag">
+            # 随感
+          </a>
+        
+      </div>
+      
+        <a href="https://angus-liu.cn/post/2017-12-18-Morality-defense/" class="post-feature-image" style="background-image: url('https://i.loli.net/2017/12/18/5a37050f027f3.jpg')">
+        </a>
+      
+      <div class="post-abstract">
+        
+      </div>
+    </article>
+  
+    <article class="post">
+      <a href="https://angus-liu.cn/post/2017-04-17-21-grams/">
+        <h2 class="post-title">二十一克</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2017-04-17
+        </span>
+        <span>
+          3 min read
+        </span>
+        
+          <a href="https://angus-liu.cn/tag/NGNalz73s0/" class="post-tag">
+            # 生活
+          </a>
+        
+          <a href="https://angus-liu.cn/tag/0h2rLbuotH/" class="post-tag">
+            # 随感
+          </a>
+        
+      </div>
+      
+      <div class="post-abstract">
+        
+      </div>
+    </article>
+  
+    <article class="post">
+      <a href="https://angus-liu.cn/post/2017-02-06-Spring-Festival/">
+        <h2 class="post-title">过年（写于节后）</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2017-02-06
+        </span>
+        <span>
+          6 min read
+        </span>
+        
+          <a href="https://angus-liu.cn/tag/NGNalz73s0/" class="post-tag">
+            # 生活
+          </a>
+        
+          <a href="https://angus-liu.cn/tag/0h2rLbuotH/" class="post-tag">
+            # 随感
+          </a>
+        
+      </div>
+      
+        <a href="https://angus-liu.cn/post/2017-02-06-Spring-Festival/" class="post-feature-image" style="background-image: url('https://i.loli.net/2017/08/09/598b048f21a92.jpg')">
+        </a>
+      
+      <div class="post-abstract">
+        
+      </div>
+    </article>
+  
+</div>
 
-    </div>
-    <script type="application/javascript">
+        <div class="pagination-container">
+  
+  
+</div>
 
-hljs.initHighlightingOnLoad()
+        <div class="site-footer">
+  2019-2020 @ <a href="https://github.com/Angus-Liu" target="_blank">Angus Liu</a> | 
+  <a class="rss" href="https://angus-liu.cn/atom.xml" target="_blank">RSS</a>
+</div>
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
 
 </script>
 
-
-
-
+      </div>
+    </div>
   </body>
 </html>

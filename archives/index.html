@@ -1,119 +1,116 @@
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Angus的源部落</title>
-<meta name="description" content="莫道儒冠误此生，从来诗书不负人">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
+<meta name="description" content="莫道儒冠误此生，从来诗书不负人" />
+<link rel="shortcut icon" href="https://angus-liu.cn/favicon.ico?v=1620647118509">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://angus-liu.cn/favicon.ico?v=1601278705017">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://angus-liu.cn/styles/main.css">
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://angus-liu.cn">
-        <img class="avatar" src="https://angus-liu.cn/images/avatar.png?v=1601278705017" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://angus-liu.cn">
-        <h1 class="site-title">Angus的源部落</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://angus-liu.cn">
+  <img class="avatar" src="https://angus-liu.cn/images/avatar.png?v=1620647118509" alt="">
+  </a>
+  <h1 class="site-title">
+    Angus的源部落
+  </h1>
+  <p class="site-description">
+    莫道儒冠误此生，从来诗书不负人
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
+    
         
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-        <div class="content-container">
-          
-          
 
 <div class="archives-container">
   
     <h2 class="year">2020</h2>
     
       
-        <article class="post">
-          <a href="https://angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji/">
-            <h2 class="post-title">
-              RocketMQ 发送重试方案设计
-              <small>2020-09-28</small>
-            </h2>
-          </a>
-        </article>
+        <a href="https://angus-liu.cn/post/guan-yu-wo/" class="post">
+          <h2 class="post-title">
+            关于我
+          </h2>
+          <div class="time">2020-11-20</div>
+        </a>
       
     
       
-        <article class="post">
-          <a href="https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro/">
-            <h2 class="post-title">
-              开源安全框架 - Shiro
-              <small>2020-09-10</small>
-            </h2>
-          </a>
-        </article>
+        <a href="https://angus-liu.cn/post/rocketmq-fa-song-chong-shi-fang-an-she-ji/" class="post">
+          <h2 class="post-title">
+            RocketMQ 发送重试方案设计
+          </h2>
+          <div class="time">2020-09-28</div>
+        </a>
       
     
       
-        <article class="post">
-          <a href="https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu/">
-            <h2 class="post-title">
-              重构剑法之山重水复疑无路
-              <small>2020-09-07</small>
-            </h2>
-          </a>
-        </article>
+        <a href="https://angus-liu.cn/post/kai-yuan-an-quan-kuang-jia-shiro/" class="post">
+          <h2 class="post-title">
+            开源安全框架 - Shiro
+          </h2>
+          <div class="time">2020-09-10</div>
+        </a>
+      
+    
+      
+        <a href="https://angus-liu.cn/post/chong-gou-jian-fa-zhi-shan-chong-shui-fu-yi-wu-lu/" class="post">
+          <h2 class="post-title">
+            重构剑法之山重水复疑无路
+          </h2>
+          <div class="time">2020-09-07</div>
+        </a>
       
     
       
@@ -132,96 +129,91 @@
       
     
       
-        <article class="post">
-          <a href="https://angus-liu.cn/post/2017-12-18-Morality-defense/">
-            <h2 class="post-title">
-              德育中期答辩
-              <small>2017-12-18</small>
-            </h2>
-          </a>
-        </article>
+    
+      
+        <a href="https://angus-liu.cn/post/2017-12-18-Morality-defense/" class="post">
+          <h2 class="post-title">
+            德育中期答辩
+          </h2>
+          <div class="time">2017-12-18</div>
+        </a>
       
     
       
-        <article class="post">
-          <a href="https://angus-liu.cn/post/2017-04-17-21-grams/">
-            <h2 class="post-title">
-              二十一克
-              <small>2017-04-17</small>
-            </h2>
-          </a>
-        </article>
+        <a href="https://angus-liu.cn/post/2017-04-17-21-grams/" class="post">
+          <h2 class="post-title">
+            二十一克
+          </h2>
+          <div class="time">2017-04-17</div>
+        </a>
       
     
       
-        <article class="post">
-          <a href="https://angus-liu.cn/post/2017-02-06-Spring-Festival/">
-            <h2 class="post-title">
-              过年（写于节后）
-              <small>2017-02-06</small>
-            </h2>
-          </a>
-        </article>
+        <a href="https://angus-liu.cn/post/2017-02-06-Spring-Festival/" class="post">
+          <h2 class="post-title">
+            过年（写于节后）
+          </h2>
+          <div class="time">2017-02-06</div>
+        </a>
       
     
   
 </div>
 
-
-        </div>
-
-        <div class="site-footer">
-  <div class="slogan">莫道儒冠误此生，从来诗书不负人</div>
-  <div class="social-container">
     
-      
-        <a href="https://github.com/Angus-Liu" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-        <a href="https://twitter.com/angus_liu_96" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      
-    
-      
-        <a href="https://weibo.com/GuangSIR" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.zhihu.com/people/guang-xian-sheng-65-33" target="_blank">
-          <i class="fab fa-zhihu"></i>
-        </a>
-      
-    
-      
-    
-  </div>
-  2019-2020 @ <a href="https://github.com/Angus-Liu" target="_blank">Angus Liu</a> | <a class="rss" href="https://angus-liu.cn/atom.xml" target="_blank">RSS</a>
+        <div class="pagination-container">
+  
+  
 </div>
 
+    
+        <div class="site-footer">
+  2019-2020 @ <a href="https://github.com/Angus-Liu" target="_blank">Angus Liu</a> | 
+  <a class="rss" href="https://angus-liu.cn/atom.xml" target="_blank">RSS</a>
+</div>
 
-      </div>
-      <script type="application/javascript">
+<script>
+  hljs.initHighlightingOnLoad()
 
-hljs.initHighlightingOnLoad()
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
 
 </script>
 
-
-
-
+      </div>
     </div>
   </body>
 </html>
