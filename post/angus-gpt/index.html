@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bubble demo</title>
+    <style>
+        body {
+        }
+
+        .container {
+            background-color: rgba(34, 195, 170, 0.1);
+            max-width: 400px;
+            margin: auto;
+            height: 600px;
+            border-radius: 10px;
+            padding-top: 10px;
+        }
+
+        .option-wrapper {
+            width: 400px;
+        }
+
+        .input {
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .content-wrapper {
+            margin: 10px;
+            height: 500px;
+            overflow: auto;
+        }
+
+        .bubble {
+            display: inline-block;
+            max-width: 65%;
+            padding: 9px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            line-height: 24px;
+            box-shadow: 2px 2px 5px rgba(102, 102, 102, 0.1);
+            white-space: pre-line;
+        }
+
+        .left-bubble {
+            background-color: #ffffff;
+            border-top-left-radius: 0;
+        }
+
+        .right-bubble {
+            float: right;
+            color: #fff;
+            background-color: #3FD1E1;
+            border-bottom-right-radius: 0;
+        }
+
+        .bubble-wrapper img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .bubble-wrapper {
+            clear: right;
+            margin-bottom: 20px;
+            overflow: auto;
+        }
+
+        .time-wrapper {
+            text-align: center;
+            font-size: 12px;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+
+        #btn-submit {
+            float: right;
+        }
+    </style>
+    <script>
+        const API_KEY = "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";
+
+        function htmlToElement(html) {
+            let template = document.createElement('template');
+            template.innerHTML = html.trim();
+            return template.content.firstChild;
+        }
+
+        function appendBubble(text, isLeft) {
+            let contentWrapper = document.getElementById("content-wrapper");
+            let className = isLeft ? 'left-bubble' : 'right-bubble';
+            let bubble = htmlToElement(`
+                <div class="bubble-wrapper">
+                    <div class="bubble ${className}">${text}</div>
+                </div>
+            `);
+            contentWrapper.appendChild(bubble);
+            contentWrapper.scrollTop = contentWrapper.scrollHeight;
+        }
+
+        const request = new XMLHttpRequest();
+        const messages = [];
+
+        function requestChatGpt(question) {
+            request.open("POST", "https://api.openai.com/v1/chat/completions", true);
+            request.setRequestHeader("Content-Type", "application/json");
+            request.setRequestHeader("Authorization", `Bearer ${API_KEY}`);
+            request.onloadend = function (e) {
+                if (this.status === 200) {
+                    let resp = JSON.parse(this.response);
+                    let answer = resp.choices[0].message;
+                    appendBubble(answer.content.trim(), true);
+                    messages.push(answer);
+                } else {
+                    appendBubble("暂时无法处理你的问题，请稍后再试", true)
+                }
+            };
+            messages.push({"role": "user", "content": question});
+            let body = {
+                "model": "gpt-3.5-turbo",
+                "messages": messages
+            };
+            request.send(JSON.stringify(body));
+        }
+
+        function submit() {
+            let input = document.getElementById("input");
+            let content = input.value;
+            input.value = "";
+            appendBubble(content, false);
+            requestChatGpt(content)
+        }
+
+        function handleKeyCode(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                if (!event.shiftKey) {
+                    this.submit();
+                } else {
+                    let input = document.getElementById("input");
+                    input.value = input.value + '\n';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="content-wrapper" id="content-wrapper">
+        <div class="bubble-wrapper">
+            <div class="bubble left-bubble">你好，我是 ChatGPT。</div>
+        </div>
+    </div>
+    <div class="option-wrapper">
+        <textarea class="input" id="input"
+                  rows="5" autofocus="autofocus"
+                  onkeydown="handleKeyCode(event)"
+                  placeholder="Enter 键发送消息，Shift + Enter 键换行"
+        ></textarea>
+        <button id="btn-submit" onclick="submit()">点击发送</button>
+    </div>
+</div>
+</body>
+</html>
